@@ -1,0 +1,19 @@
+<table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Banka</th>
+      <th>Broj racuna<th>
+      <th>Stanje<th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{racun.id}}</td>
+      <td><app-sb [b] = "uzmiBanku(racun.bankaId)"></app-sb></td>
+      <td>{{racun.brojRacuna}}</td>
+      <td>{{racun.stanje}}</td>
+    </tr>
+    </tbody>
+</table>
+

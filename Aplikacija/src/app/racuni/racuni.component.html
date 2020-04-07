@@ -1,0 +1,38 @@
+<table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Banka</th>
+      <th>Broj racuna</th>
+      <th>Stanje</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let r of racuni">
+      <td>{{r.id}}</td>
+      <td><app-sb [b] = "uzmiBanku(r.bankaId)"></app-sb></td>
+      <td>{{r.brojRacuna}}</td>
+      <td>{{r.stanje}}</td>
+      <td><button type="button" (click)="obrisiRacun(r.id)">Obrisi racun</button></td>
+      <td><button type="button" (click)="pogledajRacun(r.id)">Pogledaj detalje racuna</button></td>
+      
+    </tr>
+    </tbody>
+  </table>
+
+<br>
+<br>
+
+<h1>Dodavanje racuna</h1>
+<form ngNativeValidate (ngSubmit)="dodajRacun()">
+    <label>Izaberite banku</label>
+    <select name="dodataBanka" [(ngModel)]="dodataBanka">
+        <option *ngFor="let b of banke" [ngValue]="b.id">{{b.poslovnoIme}}</option>
+    </select>
+    <br>
+    <label>Dodaj broj racuna</label>
+    <input name="brojRacuna" [(ngModel)]="brojRacuna" placeholder="Broj racuna" required>
+    <br>
+    <button (click)="dodajRacun()">Dodaj racun</button>
+
+  </form>

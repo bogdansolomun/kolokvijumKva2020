@@ -1,0 +1,29 @@
+<table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Poslovno ime</th>
+      <th>PIB</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of banke">
+      <td>{{b.id}}</td>
+      <td>{{b.poslovnoIme}}</td>
+      <td>{{b.pib}}</td>
+      <td><button type="button" (click)="obrisi(b.id)">Obrisi banku</button></td>
+      <td><button type="button" (click)="pogledajBanku(b.id)">Pogledaj detalje banke</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+<br>
+<br>
+
+<form ngNativeValidate (ngSubmit)="dodajBanku()">
+  <label>Dodaj poslovno ime</label>
+  <input name="poslovnoIme" [(ngModel)]="poslovnoIme" placeholder="Poslovno ime" required>
+  <label>Dodaj pib</label>
+  <input name="pib" [(ngModel)]="pib" placeholder="pib" required>
+  <input type="submit" value="Dodajte">
+</form>

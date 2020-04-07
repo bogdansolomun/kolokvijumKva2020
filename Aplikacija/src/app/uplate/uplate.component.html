@@ -1,0 +1,42 @@
+<table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Uplatilac</th>
+      <th>Primalac</th>
+      <th>Iznos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let u of uplate">
+      <td>{{u.id}}</td>
+      <td><app-sr [r]="uzmiRacun(u.uplatilac)"></app-sr></td>
+      <td><app-sr [r]="uzmiRacun(u.primalac)"></app-sr></td>
+      <td>{{u.iznos}}</td>
+      <td><button type="button" (click)="obrisiUplatu(u.id)">Obrisi uplatu</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <br>
+  <br>
+
+  <h1>Dodavanje uplate</h1>
+<form ngNativeValidate (ngSubmit)="dodajUplatu()">
+    <label>Izaberite uplatioca</label>
+    <select name="dodatUplatilac" [(ngModel)]="dodatUplatilac">
+        <option *ngFor="let r of racuni" [ngValue]="r.uplatilac">{{r.brojRacuna}}</option>
+    </select>
+    <br>
+    <label>Izaberite  primaoca</label>
+    <select name="dodatPrimalac" [(ngModel)]="dodatPrimalac">
+        <option *ngFor="let r of racuni" [ngValue]="r.primalac">{{r.brojRacuna}}</option>
+    </select>
+    <label>Dodaj iznos</label>
+    <input type="number" name="iznos" [(ngModel)]="iznos" placeholder="Iznos" required>
+    <br>
+    <button (click)="dodajUplatu()">Dodaj racun</button>
+
+  </form>
+

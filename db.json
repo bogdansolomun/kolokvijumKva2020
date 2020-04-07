@@ -1,0 +1,100 @@
+{
+  "banka": [
+    {
+      "id": 1,
+      "poslovnoIme": "VillageBank",
+      "pib": "123456"
+    },
+    {
+      "id": 2,
+      "poslovnoIme": "Nekomercijalna banka",
+      "pib": "32415"
+    },
+    {
+      "id": 3,
+      "poslovnoIme": "MultiCredit",
+      "pib": "654321"
+    },
+    {
+      "id": 4,
+      "poslovnoIme": "Beta",
+      "pib": "000000"
+    }
+  ],
+  "uplata": [
+    {
+      "id": 1,
+      "uplatilac": 1,
+      "primalac": 2,
+      "iznos": 1000
+    },
+    {
+      "id": 2,
+      "uplatilac": 3,
+      "primalac": 1,
+      "iznos": 500
+    },
+    {
+      "id": 3,
+      "uplatilac": 1,
+      "primalac": 3,
+      "iznos": 100
+    },
+    {
+      "id": 4,
+      "uplatilac": 1,
+      "primalac": 3,
+      "iznos": 450
+    }
+  ],
+  "racun": [
+    {
+      "id": 1,
+      "bankaId": 1,
+      "brojRacuna": "001-23434524123123-231",
+      "stanje": 5012345.13
+    },
+    {
+      "id": 2,
+      "bankaId": 3,
+      "brojRacuna": "002-123435-990",
+      "stanje": 500
+    },
+    {
+      "id": 3,
+      "bankaId": 3,
+      "brojRacuna": "003-213124354621-421",
+      "stanje": 364779.51
+    },
+    {
+      "id": 4,
+      "bankaId": 2,
+      "brojRacuna": "004-21343243241231-123",
+      "stanje": 987.3
+    },
+    {
+      "id": 5,
+      "bankaId": 2,
+      "brojRacuna": "42124141414",
+      "stanje": 0
+    },
+    {
+      "id": 6,
+      "bankaId": 2,
+      "brojRacuna": "42124141414",
+      "stanje": 0
+    },
+    {
+      "id": 7,
+      "bankaId": 2,
+      "brojRacuna": "42124141414414",
+      "stanje": 0
+    },
+    {
+      "id": 8,
+      "bankaId": 2,
+      "brojRacuna": "42124141414414",
+      "stanje": 0
+    }
+  ]
+}
